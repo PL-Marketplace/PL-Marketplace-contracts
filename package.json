@@ -1,0 +1,31 @@
+{
+  "name": "pl-nft-marketplace-hedera",
+  "version": "1.0.0",
+  "description": "PL-NFT Marketplace on Hedera - Decentralized Prompt Licensing",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.ts --network hedera-testnet",
+    "deploy:testnet": "hardhat run scripts/deploy.ts --network hedera-testnet",
+    "deploy:categories": "hardhat run scripts/deploy-categories.ts --network hedera-testnet",
+    "deploy:mainnet": "hardhat run scripts/deploy.ts --network hedera-mainnet",
+    "generate-abis": "ts-node scripts/generate-abis.ts",
+    "verify": "hardhat verify",
+    "clean": "hardhat clean",
+    "postdeploy": "npm run generate-abis"
+  },
+  "devDependencies": {
+    "@hashgraph/sdk": "^2.45.0",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@openzeppelin/contracts": "^5.0.0",
+    "hardhat": "^2.19.0",
+    "ethers": "^6.9.0",
+    "dotenv": "^16.3.1",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0"
+  },
+  "dependencies": {
+    "crypto-js": "^4.2.0"
+  }
+}
